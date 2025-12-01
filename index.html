@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Updated title for Club EROS -->
-  <title>Club EROS — Calendario de Adviento</title>
+  <title>Calendario Festivo — Arkana Games</title>
   
-  <!-- Updated fonts to Club EROS fonts: Cinzel, Inter, Teko -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600&family=Teko:wght@500;600&display=swap" rel="stylesheet">
@@ -18,19 +16,22 @@
       box-sizing: border-box;
     }
 
-    /* Updated CSS variables to Club EROS color palette */
+    /* Updated color palette to burgundy/red/gold Christmas theme */
     :root {
-      --gold: #D4AF37;
-      --gold-dark: #B4902F;
-      --gold-soft: #F1D27A;
-      --gold-accent: #FFEAA7;
+      --gold: #FFD700;
+      --gold-dark: #C5A028;
+      --gold-soft: #F4E4C1;
+      --gold-accent: #FFF8DC;
 
-      --bordeaux: #1E0B10;
-      --bordeaux-soft: #2B0F16;
-      --bordeaux-deep: #4A1520;
+      --burgundy: #800020;
+      --burgundy-dark: #5C0011;
+      --deep-red: #A52A2A;
+      --christmas-red: #C41E3A;
+      --dark-red: #8B0000;
 
       --cream: #FFF8F0;
       --white: #FFFFFF;
+      --warm-beige: #F5E6D3;
 
       --ff-body: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       --ff-display: 'Cinzel', serif;
@@ -38,12 +39,12 @@
     }
 
     body {
-      /* Updated font family and background to EROS style */
       font-family: var(--ff-body);
+      /* Christmas burgundy/red gradient background */
       background: 
-        radial-gradient(1200px 700px at 50% -10%, rgba(212,175,55,.12), transparent 60%),
-        radial-gradient(900px 600px at 80% 100%, rgba(212,175,55,.08), transparent 60%),
-        linear-gradient(135deg, var(--bordeaux) 0%, var(--bordeaux-soft) 55%, var(--bordeaux-deep) 100%);
+        radial-gradient(1200px 700px at 50% -10%, rgba(255,215,0,.15), transparent 60%),
+        radial-gradient(900px 600px at 80% 100%, rgba(196,30,58,.12), transparent 60%),
+        linear-gradient(135deg, var(--burgundy-dark) 0%, var(--burgundy) 35%, var(--deep-red) 70%, var(--christmas-red) 100%);
       min-height: 100vh;
       color: var(--cream);
       display: flex;
@@ -57,15 +58,14 @@
       line-height: 1.6;
     }
 
-    /* Preloader */
     .preloader {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      /* Updated preloader background to EROS style */
-      background: linear-gradient(135deg, var(--bordeaux) 0%, var(--bordeaux-soft) 100%);
+      /* Burgundy preloader background */
+      background: linear-gradient(135deg, var(--burgundy-dark) 0%, var(--burgundy) 50%, var(--deep-red) 100%);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -83,8 +83,7 @@
       max-width: 220px;
       margin-bottom: 30px;
       animation: logoFloat 2.5s ease-in-out infinite;
-      /* Updated drop shadow to gold */
-      filter: drop-shadow(0 10px 30px rgba(212,175,55,.35));
+      filter: drop-shadow(0 10px 30px rgba(255,215,0,.35));
     }
 
     @keyframes logoFloat {
@@ -95,8 +94,7 @@
     .progress-bar-container {
       width: 280px;
       height: 4px;
-      /* Updated progress bar colors to EROS gold */
-      background: rgba(212,175,55,.2);
+      background: rgba(255,215,0,.2);
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 2px 10px rgba(0,0,0,.35);
@@ -104,13 +102,12 @@
 
     .progress-bar {
       height: 100%;
-      /* Updated progress bar fill to EROS gold gradient */
-      background: linear-gradient(90deg, var(--gold), var(--gold-soft), var(--gold-accent));
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-accent));
       background-size: 200% 100%;
       border-radius: 10px;
       width: 0%;
       animation: loadProgress 2s ease-out forwards, shimmerBar 1.5s linear infinite;
-      box-shadow: 0 0 10px rgba(212,175,55,.5);
+      box-shadow: 0 0 10px rgba(255,215,0,.5);
     }
 
     @keyframes loadProgress {
@@ -125,7 +122,6 @@
 
     .loading-text {
       margin-top: 10px;
-      /* Updated loading text color and font */
       color: var(--gold-soft);
       font-size: .85rem;
       font-weight: 600;
@@ -133,7 +129,7 @@
       text-align: center;
     }
 
-    /* Partículas de fondo */
+    /* Christmas-themed particles with gold and red colors */
     body::before {
       content: '';
       position: fixed;
@@ -141,12 +137,12 @@
       left: 0;
       width: 100%;
       height: 100%;
-      /* Updated particle colors to EROS gold tones */
       background-image: 
-        radial-gradient(2px 2px at 20% 30%, rgba(212,175,55,0.3), transparent),
-        radial-gradient(2px 2px at 60% 70%, rgba(212,175,55,0.2), transparent),
-        radial-gradient(1px 1px at 50% 50%, rgba(241,210,122,0.2), transparent);
-      background-size: 200px 200px, 300px 300px, 250px 250px;
+        radial-gradient(2px 2px at 20% 30%, rgba(255,215,0,0.4), transparent),
+        radial-gradient(2px 2px at 60% 70%, rgba(196,30,58,0.3), transparent),
+        radial-gradient(1px 1px at 50% 50%, rgba(255,255,255,0.25), transparent),
+        radial-gradient(3px 3px at 80% 20%, rgba(255,215,0,0.2), transparent);
+      background-size: 200px 200px, 300px 300px, 250px 250px, 180px 180px;
       animation: particles 20s linear infinite;
       pointer-events: none;
       z-index: 0;
@@ -175,34 +171,33 @@
       max-width: 200px;
       height: auto;
       margin-bottom: 20px;
-      /* Updated logo shadow to gold */
-      filter: drop-shadow(0 4px 20px rgba(212,175,55,.4));
+      filter: drop-shadow(0 4px 20px rgba(255,215,0,.4));
     }
 
-    /* Added event badge similar to EROS style */
     .event-badge {
       display: inline-block;
       padding: 8px 18px;
       border-radius: 999px;
-      background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+      /* Burgundy badge background */
+      background: linear-gradient(135deg, var(--burgundy), var(--dark-red));
       font-family: var(--ff-ui);
       font-size: clamp(.8rem, 2.2vw, .95rem);
       line-height: 1;
       letter-spacing: .4px;
-      color: #2A1015;
+      color: var(--gold);
       margin-bottom: 18px;
-      box-shadow: 0 4px 20px rgba(212,175,55,.3);
+      box-shadow: 0 4px 20px rgba(128,0,32,.4);
       text-transform: uppercase;
     }
 
     h1 {
-      /* Updated heading to use EROS display font and colors */
       font-family: var(--ff-display);
       font-weight: 700;
       line-height: 1.12;
       font-size: clamp(2.2rem, 5vw, 3.6rem);
       margin-bottom: 14px;
       letter-spacing: .2px;
+      /* Christmas gold gradient for title */
       background: linear-gradient(135deg, var(--gold-accent), var(--gold));
       -webkit-background-clip: text;
       background-clip: text;
@@ -210,14 +205,40 @@
     }
 
     .subtitle {
-      /* Updated subtitle styling to EROS style */
       max-width: 620px;
       margin: 0 auto;
       color: rgba(255,248,240,.92);
       font-size: clamp(1rem, 2.2vw, 1.1rem);
     }
 
-    /* Contenedor del árbol */
+    /* Added sound control button */
+    .sound-control {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      /* Burgundy sound control background */
+      background: rgba(128,0,32,0.9);
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+
+    .sound-control:hover {
+      background: var(--gold);
+      color: var(--burgundy-dark);
+      transform: scale(1.1);
+    }
+
     .tree-container {
       position: relative;
       max-width: 850px;
@@ -238,7 +259,6 @@
       filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
     }
 
-    /* Contenedor de cajitas */
     .boxes-container {
       position: absolute;
       top: 0;
@@ -248,7 +268,6 @@
       pointer-events: none;
     }
 
-    /* Cajita individual */
     .box {
       position: absolute;
       width: 60px;
@@ -277,8 +296,8 @@
     .box-inner {
       width: 100%;
       height: 100%;
-      /* Updated box colors to EROS bordeaux and gold */
-      background: linear-gradient(135deg, #5A1823 0%, #3A0F18 100%);
+      /* Deep red gradient for gift boxes */
+      background: linear-gradient(135deg, #C41E3A 0%, #8B0000 100%);
       border: 3px solid var(--gold);
       border-radius: 12px;
       display: flex;
@@ -286,9 +305,9 @@
       align-items: center;
       justify-content: center;
       box-shadow: 
-        0 10px 30px rgba(212,175,55,.35),
-        0 0 0 1px rgba(212,175,55,.25),
-        inset 0 1px 0 rgba(255,255,255,.08);
+        0 10px 30px rgba(255,215,0,.4),
+        0 0 0 1px rgba(255,215,0,.3),
+        inset 0 1px 0 rgba(255,255,255,.1);
       position: relative;
       overflow: hidden;
     }
@@ -299,11 +318,10 @@
     }
 
     .box.claimed .box-inner {
-      background: linear-gradient(135deg, #7A2A36 0%, #5A1823 100%);
+      background: linear-gradient(135deg, #E63946 0%, #C41E3A 100%);
     }
 
     .box-number {
-      /* Updated font to EROS UI font */
       font-family: var(--ff-ui);
       font-size: 1.6rem;
       font-weight: 700;
@@ -324,7 +342,6 @@
       opacity: 0.6;
     }
 
-    /* Shine effect */
     .box:not(.locked):not(.claimed) .box-inner::after {
       content: '';
       position: absolute;
@@ -341,142 +358,33 @@
       100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
     }
 
-    /* Updated box positions to match reference images - organized in pyramid rows */
-    /* Row 1: 1 box (estrella) */
-    .box[data-day="1"] { 
-      top: 9%; 
-      left: 50%; 
-      transform: translateX(-50%); 
-    }
-    
-    /* Row 2: 2 boxes - más pegadas al centro */
-    .box[data-day="2"] { 
-      top: 16%; 
-      left: 42%; 
-      margin-right: -15px;
-    }
-    .box[data-day="3"] { 
-      top: 16%; 
-      left: 53%; 
-      margin-left: -15px;
-    }
-    
-    /* Row 3: 3 boxes - distribución uniforme */
-    .box[data-day="4"] { 
-      top: 31%; 
-      left: 37%; 
-      margin-right: -5px;
-    }
-    .box[data-day="5"] { 
-      top: 31%; 
-      left: 50%; 
-      transform: translateX(-50%); 
-    }
-    .box[data-day="6"] { 
-      top: 31%; 
-      left: 57%; 
-      margin-left: -5px;
-    }
-    
-    /* Row 4: 5 boxes - bien espaciadas */
-    .box[data-day="7"] { 
-      top: 48%; 
-      left: 29%; 
-      margin-right: -3px;
-    }
-    .box[data-day="8"] { 
-      top: 48%; 
-      left: 38%; 
-      margin-right: -2px;
-    }
-    .box[data-day="9"] { 
-      top: 48%; 
-      left: 50%; 
-      transform: translateX(-50%); 
-    }
-    .box[data-day="10"] { 
-      top: 48%; 
-      left: 55%; 
-      margin-left: -2px;
-    }
-    .box[data-day="11"] { 
-      top: 48%; 
-      left: 64%; 
-      margin-left: -3px;
-    }
-    
-    /* Row 5: 6 boxes - ajustadas hacia el centro */
-    .box[data-day="12"] { 
-      top: 66%; 
-      left: 26%; 
-      margin-right: -2px;
-    }
-    .box[data-day="13"] { 
-      top: 66%; 
-      left: 34%; 
-      margin-right: -1px;
-    }
-    .box[data-day="14"] { 
-      top: 66%; 
-      left: 42%; 
-      margin-right: -1px;
-    }
-    .box[data-day="15"] { 
-      top: 66%; 
-      left: 51%; 
-      margin-left: -1px;
-    }
-    .box[data-day="16"] { 
-      top: 66%; 
-      left: 59%; 
-      margin-left: -1px;
-    }
-    .box[data-day="17"] { 
-      top: 66%; 
-      left: 67%; 
-      margin-left: -2px;
-    }
-    
-    /* Row 6: 7 boxes - fila más grande */
-    .box[data-day="18"] { 
-      top: 86%; 
-      left: 22%; 
-    }
-    .box[data-day="19"] { 
-      top: 86%; 
-      left: 30%; 
-    }
-    .box[data-day="20"] { 
-      top: 86%; 
-      left: 38%; 
-    }
-    .box[data-day="21"] { 
-      top: 86%; 
-      left: 46%; 
-    }
-    .box[data-day="22"] { 
-      top: 86%; 
-      left: 54%; 
-    }
-    .box[data-day="23"] { 
-      top: 86%; 
-      left: 62%; 
-    }
-    .box[data-day="24"] { 
-      top: 86%; 
-      left: 70%; 
-    }
-    
-    /* Row 7: 1 box grande (día 25 - regalo especial) */
-    .box[data-day="25"] { 
-      top: 93%; 
-      left: 50%; 
-      transform: translateX(-50%); 
-      width: 70px; 
-      height: 70px; 
-    }
+    /* Box positions - same as before */
+    .box[data-day="1"] { top: 9%; left: 50%; transform: translateX(-50%); }
+    .box[data-day="2"] { top: 16%; left: 42%; margin-right: -15px; }
+    .box[data-day="3"] { top: 16%; left: 53%; margin-left: -15px; }
+    .box[data-day="4"] { top: 31%; left: 37%; margin-right: -5px; }
+    .box[data-day="5"] { top: 31%; left: 50%; transform: translateX(-50%); }
+    .box[data-day="6"] { top: 31%; left: 57%; margin-left: -5px; }
+    .box[data-day="7"] { top: 48%; left: 29%; margin-right: -3px; }
+    .box[data-day="8"] { top: 48%; left: 38%; margin-right: -2px; }
+    .box[data-day="9"] { top: 48%; left: 50%; transform: translateX(-50%); }
+    .box[data-day="10"] { top: 48%; left: 55%; margin-left: -2px; }
+    .box[data-day="11"] { top: 48%; left: 64%; margin-left: -3px; }
+    .box[data-day="12"] { top: 66%; left: 26%; margin-right: -2px; }
+    .box[data-day="13"] { top: 66%; left: 34%; margin-right: -1px; }
+    .box[data-day="14"] { top: 66%; left: 42%; margin-right: -1px; }
+    .box[data-day="15"] { top: 66%; left: 51%; margin-left: -1px; }
+    .box[data-day="16"] { top: 66%; left: 59%; margin-left: -1px; }
+    .box[data-day="17"] { top: 66%; left: 67%; margin-left: -2px; }
+    .box[data-day="18"] { top: 86%; left: 22%; }
+    .box[data-day="19"] { top: 86%; left: 30%; }
+    .box[data-day="20"] { top: 86%; left: 38%; }
+    .box[data-day="21"] { top: 86%; left: 46%; }
+    .box[data-day="22"] { top: 86%; left: 54%; }
+    .box[data-day="23"] { top: 86%; left: 62%; }
+    .box[data-day="24"] { top: 86%; left: 70%; }
+    .box[data-day="25"] { top: 93%; left: 50%; transform: translateX(-50%); width: 70px; height: 70px; }
 
-    /* Modal */
     .modal {
       display: none;
       position: fixed;
@@ -502,8 +410,8 @@
     }
 
     .modal-content {
-      /* Updated modal to EROS styling */
-      background: linear-gradient(135deg, var(--bordeaux-soft) 0%, var(--bordeaux) 100%);
+      /* Burgundy modal background */
+      background: linear-gradient(135deg, var(--burgundy) 0%, var(--burgundy-dark) 100%);
       border: 2px solid var(--gold);
       border-radius: 22px;
       padding: clamp(28px, 6vw, 46px);
@@ -512,9 +420,9 @@
       text-align: center;
       position: relative;
       box-shadow: 
-        0 30px 80px rgba(0,0,0,.55),
-        0 0 0 1px rgba(212,175,55,.25),
-        inset 0 1px 0 rgba(255,255,255,.05);
+        0 30px 80px rgba(0,0,0,.65),
+        0 0 0 1px rgba(255,215,0,.3),
+        inset 0 1px 0 rgba(255,255,255,.08);
       animation: modalIn .5s cubic-bezier(.68,-.55,.265,1.55);
     }
 
@@ -527,8 +435,7 @@
       position: absolute;
       top: 15px;
       right: 15px;
-      /* Updated close button to EROS style */
-      background: rgba(212,175,55, 0.2);
+      background: rgba(255,215,0, 0.2);
       border: 2px solid var(--gold);
       color: var(--gold-soft);
       font-size: 1.5rem;
@@ -545,12 +452,11 @@
 
     .modal-close:hover {
       background: var(--gold);
-      color: var(--bordeaux);
+      color: var(--burgundy-dark);
       transform: rotate(90deg);
     }
 
     .modal-day {
-      /* Updated modal text styling to EROS */
       font-family: var(--ff-ui);
       font-size: 1.1rem;
       color: var(--gold-soft);
@@ -560,7 +466,6 @@
     }
 
     .modal-prize {
-      /* Updated prize display to EROS fonts and colors */
       font-family: var(--ff-display);
       font-size: clamp(1.8rem, 5vw, 2.6rem);
       font-weight: 700;
@@ -579,10 +484,9 @@
       margin-top: 15px;
     }
 
-    /* Added modal button styling similar to EROS */
     .modal-button {
       background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-      color: var(--white);
+      color: var(--burgundy-dark);
       border: none;
       padding: 14px 40px;
       font-size: 1rem;
@@ -592,21 +496,20 @@
       margin-top: 18px;
       transition: transform .2s ease, box-shadow .2s ease;
       letter-spacing: .2px;
-      box-shadow: 0 10px 30px rgba(212,175,55,.4);
+      box-shadow: 0 10px 30px rgba(255,215,0,.4);
       font-family: var(--ff-ui);
       text-transform: uppercase;
     }
 
     .modal-button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 14px 38px rgba(212,175,55,.5);
+      box-shadow: 0 14px 38px rgba(255,215,0,.5);
     }
 
     .modal-button:active {
       transform: translateY(0);
     }
 
-    /* Confetti */
     .confetti {
       position: fixed;
       width: 10px;
@@ -628,7 +531,6 @@
       }
     }
 
-    /* Christmas lights positioned between boxes */
     .christmas-light {
       position: absolute;
       width: 8px;
@@ -674,7 +576,6 @@
       }
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       .box {
         width: 45px;
@@ -696,6 +597,12 @@
 
       .header {
         margin-bottom: 30px;
+      }
+
+      .sound-control {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
       }
     }
 
@@ -742,29 +649,28 @@
 </head>
 <body>
 
-  <!-- Preloader -->
   <div class="preloader" id="preloader">
-    <!-- Updated logo alt text to Club EROS -->
-    <img src="assets/eros-logo.png" alt="Club EROS" class="preloader-logo">
+    <img src="/images/image.png" alt="Arkana Games" class="preloader-logo">
     <div class="progress-bar-container">
       <div class="progress-bar"></div>
     </div>
     <div class="loading-text">Cargando calendario...</div>
   </div>
 
+  <!-- Added sound control button -->
+  <button class="sound-control" id="soundControl" aria-label="Control de sonido">
+    🔊
+  </button>
+
   <div class="header">
-    <!-- Updated logo reference and alt text to Club EROS -->
-    <img src="assets/eros-logo.png" alt="Club EROS" class="logo" id="logo">
-    <!-- Added event badge and updated title -->
-    <h1>Calendario de Eros</h1>
+    <img src="/images/image.png" alt="Arkana Games" class="logo" id="logo">
+    <h1>Calendario festivo</h1>
     <p class="subtitle">Celebramos la Navidad con premios exclusivos. Descubrí tu sorpresa dorada cada día.</p>
   </div>
 
   <div class="tree-container">
-    <!-- Árbol de Navidad SVG mejorado con más detalles navideños -->
     <svg class="tree-svg" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <!-- Gradientes para dar profundidad -->
         <linearGradient id="treeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
           <stop offset="0%" style="stop-color:#3d5a3d;stop-opacity:1" />
           <stop offset="50%" style="stop-color:#2d4a2d;stop-opacity:1" />
@@ -775,12 +681,10 @@
           <stop offset="50%" style="stop-color:#5a3828;stop-opacity:1" />
           <stop offset="100%" style="stop-color:#3a2818;stop-opacity:1" />
         </linearGradient>
-        <!-- Updated star gradient to EROS gold tones -->
         <radialGradient id="starGradient">
           <stop offset="0%" style="stop-color:#FFEAA7;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
         </radialGradient>
-        <!-- Filtro de brillo para la estrella -->
         <filter id="starGlow" x="-50%" y="-50%" width="200%" height="200%">
           <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
           <feMerge>
@@ -790,18 +694,14 @@
         </filter>
       </defs>
       
-      <!-- Sombra del árbol -->
       <ellipse cx="150" cy="390" rx="140" ry="8" fill="rgba(0,0,0,0.3)" opacity="0.5"/>
       
-      <!-- Cuerpo del árbol con capas -->
       <path d="M150 30 L105 90 L125 90 L85 155 L110 155 L70 220 L105 220 L55 295 L110 295 L45 375 L255 375 L190 295 L245 295 L195 220 L230 220 L190 155 L215 155 L175 90 L195 90 Z" 
             fill="url(#treeGradient)" 
             stroke="#1a2a1a" 
             stroke-width="2.5"
             stroke-linejoin="round"/>
       
-      <!-- Detalles de luces y nieve en las ramas -->
-      <!-- Nieve en las puntas -->
       <path d="M150 30 L105 90 L125 90" 
             fill="none" 
             stroke="#e8f4f8" 
@@ -821,7 +721,6 @@
             stroke-linecap="round" 
             opacity="0.6"/>
       
-      <!-- Luces decorativas (círculos pequeños) -->
       <circle cx="130" cy="110" r="3" fill="#ff6b6b" opacity="0.8">
         <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
       </circle>
@@ -847,69 +746,107 @@
         <animate attributeName="opacity" values="0.8;1;0.8" dur="2.1s" repeatCount="indefinite"/>
       </circle>
       
-      <!-- Tronco con gradiente -->
       <rect x="125" y="375" width="50" height="25" 
             fill="url(#trunkGradient)" 
             stroke="#2d1f18" 
             stroke-width="2"
             rx="2"/>
       
-      <!-- Estrella inmóvil con brillo (sin animación rotate) -->
       <g filter="url(#starGlow)">
         <path d="M150 8 L156 22 L171 22 L159 31 L164 45 L150 36 L136 45 L141 31 L129 22 L144 22 Z" 
               fill="url(#starGradient)" 
-              stroke="#D4AF37" 
+              stroke="#FFD700" 
               stroke-width="2">
         </path>
       </g>
     </svg>
 
-    <!-- Contenedor de cajitas -->
     <div class="boxes-container" id="boxesContainer"></div>
-
-    <!-- Christmas lights container -->
     <div class="christmas-lights-container" id="christmasLightsContainer"></div>
+    
+    <!-- Added decorative gifts below the tree -->
+    <div style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); display: flex; gap: 15px; z-index: 10;">
+      <div style="font-size: 2.5rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)); animation: giftBounce 2s ease-in-out infinite;">🎁</div>
+      <div style="font-size: 3rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)); animation: giftBounce 2s ease-in-out 0.3s infinite;">🎄</div>
+      <div style="font-size: 2.5rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)); animation: giftBounce 2s ease-in-out 0.6s infinite;">🎁</div>
+    </div>
+    
+    <style>
+      @keyframes giftBounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+      }
+    </style>
   </div>
 
-  <!-- Modal de premio -->
   <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalPrize">
     <div class="modal-content">
       <button class="modal-close" id="modalClose" aria-label="Cerrar">&times;</button>
       <div class="modal-day" id="modalDay"></div>
       <div class="modal-prize" id="modalPrize"></div>
       <div class="modal-message" id="modalMessage"></div>
-      <!-- Added accept button similar to EROS style -->
       <button class="modal-button" onclick="closeModal()">Aceptar</button>
     </div>
   </div>
 
-  <audio id="audio" src="assets/sound.mp3" preload="auto"></audio>
+  <!-- Updated audio to use assets folder instead of URLs -->
+  <audio id="backgroundMusic" loop preload="auto">
+    <source src="/assets/background-music.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="prizeSound" preload="auto">
+    <source src="/assets/prize-sound.mp3" type="audio/mpeg">
+  </audio>
 
   <script>
+    let isMusicPlaying = false;
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    const prizeSound = document.getElementById('prizeSound');
+    const soundControl = document.getElementById('soundControl');
+
     window.addEventListener('load', () => {
       setTimeout(() => {
         document.getElementById('preloader').classList.add('hidden');
+        startBackgroundMusic();
       }, 2100);
     });
+
+    function startBackgroundMusic() {
+      backgroundMusic.play().then(() => {
+        isMusicPlaying = true;
+        soundControl.textContent = '🔊';
+      }).catch(() => {
+        console.log('[v0] Audio autoplay blocked - user interaction required');
+        isMusicPlaying = false;
+        soundControl.textContent = '🔇';
+      });
+    }
+
+    function toggleBackgroundMusic() {
+      if (isMusicPlaying) {
+        backgroundMusic.pause();
+        soundControl.textContent = '🔇';
+        isMusicPlaying = false;
+      } else {
+        backgroundMusic.play();
+        soundControl.textContent = '🔊';
+        isMusicPlaying = true;
+      }
+    }
+
+    soundControl.addEventListener('click', toggleBackgroundMusic);
 
     function createChristmasLights() {
       const lightsContainer = document.getElementById('christmasLightsContainer');
       const colors = ['red', 'yellow', 'blue', 'green'];
       
-      // Define light positions between boxes in each row
       const lightPositions = [
-        // Between row 1 and 2
         { top: '15%', left: '44%' },
         { top: '15%', left: '50%' },
         { top: '15%', left: '55%' },
-        
-        // Between row 2 and 3
         { top: '27%', left: '40%' },
         { top: '27%', left: '47%' },
         { top: '27%', left: '52%' },
         { top: '27%', left: '58%' },
-        
-        // Between row 4 and 5
         { top: '44%', left: '33%' },
         { top: '44%', left: '38%' },
         { top: '44%', left: '44%' },
@@ -917,8 +854,6 @@
         { top: '44%', left: '55%' },
         { top: '44%', left: '60%' },
         { top: '44%', left: '66%' },
-        
-        // Between row 5 and 6
         { top: '60%', left: '30%' },
         { top: '60%', left: '34%' },
         { top: '60%', left: '39%' },
@@ -928,8 +863,6 @@
         { top: '60%', left: '60%' },
         { top: '60%', left: '65%' },
         { top: '60%', left: '69%' },
-        
-        // Between row 6 and 7
         { top: '80%', left: '30%' },
         { top: '80%', left: '36%' },
         { top: '80%', left: '42%' },
@@ -950,43 +883,47 @@
       });
     }
 
-    const premios = [
-      { valor: '💸 5.000 FICHAS GRATIS', peso: 0.5, tipo: 'fichas' },
-      { valor: '🎉 2.500 FICHAS GRATIS', peso: 1, tipo: 'fichas' },
-      { valor: '🔥 BONO DEL 200%', peso: 20, tipo: 'bono' },
-      { valor: '💥 BONO DEL 150%', peso: 35, tipo: 'bono' },
-      { valor: '🎁 BONO DEL 100%', peso: 42.5, tipo: 'bono' },
-      { valor: '🎁 BONO DEL 50%', peso: 42.5, tipo: 'bono' },
-      { valor: '🎁 BONO DEL 30%', peso: 42.5, tipo: 'bono' }
-    ];
+    const dailyPrizes = {
+      1: '🎁 BONO DEL 100%',
+      2: '🎁 BONO DEL 50%',
+      3: '🎁 BONO DEL 30%',
+      4: '💥 BONO DEL 150%',
+      5: '🎁 BONO DEL 100%',
+      6: '🎁 BONO DEL 50%',
+      7: '🔥 BONO DEL 200%',
+      8: '💥 BONO DEL 150%',
+      9: '🎁 BONO DEL 100%',
+      10: '🎉 2.500 FICHAS GRATIS',
+      11: '🎁 BONO DEL 50%',
+      12: '💥 BONO DEL 150%',
+      13: '🎁 BONO DEL 100%',
+      14: '🎁 BONO DEL 30%',
+      15: '🔥 BONO DEL 200%',
+      16: '🎁 BONO DEL 100%',
+      17: '💥 BONO DEL 150%',
+      18: '🎁 BONO DEL 50%',
+      19: '🎁 BONO DEL 100%',
+      20: '💸 5.000 FICHAS GRATIS',
+      21: '💥 BONO DEL 150%',
+      22: '🎁 BONO DEL 100%',
+      23: '🔥 BONO DEL 200%',
+      24: '🎉 2.500 FICHAS GRATIS',
+      25: '💸 5.000 FICHAS GRATIS'
+    };
 
-    function pickWeighted(items) {
-      const totalWeight = items.reduce((sum, item) => sum + item.peso, 0);
-      let random = Math.random() * totalWeight;
-      for (const item of items) {
-        random -= item.peso;
-        if (random <= 0) return item;
-      }
-      return items[items.length - 1];
-    }
-
-    // Obtener día actual (para pruebas, puedes cambiar esto)
     function getCurrentDay() {
       const now = new Date();
-      // Para pruebas, descomenta la siguiente línea para simular un día específico
-      // return 15; // Simula que estamos en el día 15
       
-      // Solo en diciembre
-      if (now.getMonth() === 11) { // Diciembre es mes 11 (0-indexed)
+      // Only in December
+      if (now.getMonth() === 11) {
         return now.getDate();
       }
       
-      // Para pruebas fuera de diciembre, retorna un día simulado
-      return 1; // Cambia esto para probar diferentes días
+      // For testing outside December, return day 1
+      return 1;
     }
 
-    // LocalStorage para premios reclamados
-    const STORAGE_KEY = 'advent_calendar_claims_eros';
+    const STORAGE_KEY = 'advent_calendar_claims_arkana';
 
     function getClaimedDays() {
       const data = localStorage.getItem(STORAGE_KEY);
@@ -1012,7 +949,6 @@
       return claims[day]?.prize || null;
     }
 
-    // Crear cajitas
     function createBoxes() {
       const container = document.getElementById('boxesContainer');
       const currentDay = getCurrentDay();
@@ -1022,7 +958,7 @@
         box.className = 'box';
         box.setAttribute('data-day', day);
         
-        const isLocked = day > currentDay;
+        const isLocked = day !== currentDay;
         const isClaimed = isDayClaimed(day);
         
         if (isLocked) {
@@ -1048,36 +984,33 @@
       }
     }
 
-    // Abrir cajita
     function openBox(day) {
       const claimed = isDayClaimed(day);
       let prize;
 
       if (claimed) {
-        // Mostrar premio ya reclamado
         prize = getClaimedPrize(day);
       } else {
-        // Generar nuevo premio
-        const selectedPrize = pickWeighted(premios);
-        prize = selectedPrize.valor;
+        prize = dailyPrizes[day];
         saveClaim(day, prize);
         
-        // Marcar como reclamado visualmente
         const box = document.querySelector(`.box[data-day="${day}"]`);
         box.classList.add('claimed');
         box.querySelector('.box-icon').textContent = '✓';
         
-        // Confetti
         launchConfetti();
         
-        // Audio
-        playAudio();
+        if (isMusicPlaying) {
+          backgroundMusic.pause();
+        }
+        prizeSound.play().catch(() => {
+          console.log('[v0] Prize sound failed to play');
+        });
       }
 
       showModal(day, prize, claimed);
     }
 
-    // Modal
     function showModal(day, prize, alreadyClaimed) {
       const modal = document.getElementById('modal');
       const modalDay = document.getElementById('modalDay');
@@ -1090,7 +1023,7 @@
       if (alreadyClaimed) {
         modalMessage.innerHTML = '¡Ya reclamaste este premio!<br>Tu premio ha sido acreditado. Vuelve mañana por uno nuevo.';
       } else {
-        modalMessage.innerHTML = '¡Felicitaciones!<br>Tu premio ha sido acreditado. ¡Disfrutá de este regalo especial de Club EROS!';
+        modalMessage.innerHTML = '¡Felicitaciones!<br>Tu premio ha sido acreditado. ¡Disfrutá de este regalo especial!';
       }
 
       modal.classList.add('active');
@@ -1099,6 +1032,10 @@
     function closeModal() {
       const modal = document.getElementById('modal');
       modal.classList.remove('active');
+      
+      if (isMusicPlaying) {
+        backgroundMusic.play();
+      }
     }
 
     document.getElementById('modalClose').addEventListener('click', closeModal);
@@ -1106,9 +1043,8 @@
       if (e.target.id === 'modal') closeModal();
     });
 
-    // Confetti
     function launchConfetti() {
-      const colors = ['#D4AF37', '#B4902F', '#F1D27A', '#FFEAA7', '#7A2A36'];
+      const colors = ['#FFD700', '#C5A028', '#F4E4C1', '#C41E3A', '#FFFFFF'];
       for (let i = 0; i < 100; i++) {
         setTimeout(() => {
           const confetti = document.createElement('div');
@@ -1124,25 +1060,6 @@
       }
     }
 
-    // Audio
-    function playAudio() {
-      const audio = document.getElementById('audio');
-      audio.play().catch(() => {
-        console.log('[v0] Audio autoplay blocked');
-      });
-    }
-
-    // Reset for pruebas (presiona R)
-    document.addEventListener('keydown', (e) => {
-      if (e.key.toLowerCase() === 'r') {
-        if (confirm('¿Reiniciar calendario? (Solo para pruebas)')) {
-          localStorage.removeItem(STORAGE_KEY);
-          location.reload();
-        }
-      }
-    });
-
-    // Inicializar
     createBoxes();
     createChristmasLights();
   </script>
